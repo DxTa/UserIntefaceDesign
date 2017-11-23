@@ -14,6 +14,8 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.Bind;
 
+//TODO update info in the signup screen
+//- info: first name, last name, email, phone number, password
 public class SignupActivity extends AppCompatActivity {
     private static final String TAG = "SignupActivity";
 

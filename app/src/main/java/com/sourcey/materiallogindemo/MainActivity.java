@@ -7,6 +7,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
+//TODO build the screen
+//- Filling report screen
+//        - there is option to take the picture
+//        - and fill other details
+//        - info:
+//        - site name: dropdown list
+//        - date the case happened: dropdown list showing relative date (yesterday, 1 week ago, etc)
+//        - what was the cause?: dropdown list including predefined options and "other" option showing text area
 public class MainActivity extends ActionBarActivity {
 
     @Override
