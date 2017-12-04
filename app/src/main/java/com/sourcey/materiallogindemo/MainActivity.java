@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         final_text.setEnabled(false);
 
         mySpiner = (Spinner) findViewById(R.id.spinner1);
-        myAdapter= ArrayAdapter.createFromResource(this, R.array.names, android.R.layout.simple_spinner_item);
+        myAdapter= ArrayAdapter.createFromResource(this, R.array.names, R.layout.spinner_item);
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpiner.setAdapter(myAdapter);
         mySpiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){

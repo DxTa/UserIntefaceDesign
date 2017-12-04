@@ -22,11 +22,14 @@
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_height="wrap_content"
         android:layout_marginLeft="18dp"
         android:layout_alignParentRight="true"
         android:textColor="@color/black"
+        android:buttonTint="@color/primary"
+        android:drawable="@color/primary"
+        android:color="@color/primary"
+        android:state_activated="true"
         android:layout_toRightOf="@+id/textView1"/>
     <TextView
         android:id="@+id/textView2"
@@ -76,6 +79,7 @@
         android:id="@+id/leakage_blended"
         android:onClick="selectLeakage"
         android:textColor="@color/black"
+        android:buttonTint="@color/primary"
         android:text="@string/pipe_blended"/>
 
     <CheckBox
@@ -86,6 +90,7 @@
         android:id="@+id/leakage_broken"
         android:textColor="@color/black"
         android:onClick="selectLeakage"
+        android:buttonTint="@color/primary"
         android:text="@string/pipe_broken"/>
 
     <TextView
