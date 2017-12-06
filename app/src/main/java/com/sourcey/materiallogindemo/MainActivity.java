@@ -34,6 +34,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 
 //TODO build the screen
 //- Filling report screen
@@ -59,11 +62,14 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     Spinner mySpiner;
     ArrayAdapter<CharSequence>  myAdapter;
 
+    @Bind(R.id.send) TextView _sendButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -92,6 +98,16 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             }
         });
 
+        _sendButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Start the Signup activity
+                Intent intent = new Intent(getApplicationContext(), ReportSuccessActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+            }
+        });
 
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);

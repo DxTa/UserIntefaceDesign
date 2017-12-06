@@ -22,4 +22,24 @@ import butterknife.Bind;
 //TODO build the screen
 //- Notification/new screen after sending the leakage report
 public class ReportSuccessActivity extends AppCompatActivity {
+
+    @Bind(R.id.okButton) TextView _okButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_report_success);
+
+        ButterKnife.bind(this);
+
+        _okButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // Start the Signup activity
+                finish();
+            }
+        });
+
+    }
 }
